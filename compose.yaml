@@ -1,0 +1,13 @@
+version: "3"
+services:
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    ports:
+      - 445:445
+    volumes:
+      - samba_storage:/storage
+    restart: on-failure
+
+volumes:
+    samba_storage:
